@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(3, 47, 97);    
+    opacity: 0.8;
+    text-align: justify;
+    font-size: 15px;
+}
+
+h1{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 50px;
+}
+form{
+    text-align: center;
+    font-size: 40px;
+}
+
+.question{
+    margin: 20px;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    border-radius: 2%;
+    border-style: groove;
+    padding: 1%;
+}
+
+footer{
+    color: rgb(244, 237, 237);
+    text-align: center;
+    margin: 80px auto 20px;
+  }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Search Engine</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Search your Query</h1>
+    <form >
+        <input type="text" name="question" id="question">
+        <input type="submit" value="Search">
+    </form>
+    <div class="loading"></div>
+    <div class="question">
+        <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="url">
+            <a href=""></a>
+        </div>
+        <div class="statement"></div>
+    </div>
+    <div class="question">
+        <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="url">
+            <a href=""></a>
+        </div>
+        <div class="statement"></div>
+    </div>
+    <div class="question">
+        <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="url">
+            <a href=""></a>
+        </div>
+        <div class="statement"></div>
+    </div>
+    <div class="question">
+        <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="url">
+            <a href=""></a>
+        </div>
+        <div class="statement"></div>
+    </div>
+    <div class="question">
+        <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="url">
+            <a href=""></a>
+        </div>
+        <div class="statement"></div>
+    </div>
+
+    <footer>
+        Copyright &copy; Nischala_Mekala 2022
+    </footer>
+    
+</body>
+</html>
+
+<script>
+    const form = document.querySelector("form")
+    const questionElement = form.question
+    const questions = document.querySelectorAll(".question")
+    const titles = document.querySelectorAll(".title")
+    const urls = document.querySelectorAll(".url")
+    const statements = document.querySelectorAll('.statement')
+    const loadingDiv = document.querySelectorAll(".loading")
+    form.addEventListener("submit", async(e)=>{
+        e.preventDefault();
+        const question = questionElement.value
+        for(let i=0; i<5; i++){
+            titles[i].innerHTML=``
+            urls[i].innerHTML=``
+            statements[i].innerHTML=``
+        }
+        loadingDiv.innerHTML=`Loading...`
+       
+        //fetch
+        try{
+            const res = await fetch(`/search?question=${question}`,{method: "GET"})
+        const data=await res.json() 
+        loadingDiv.innerHTML=` `;
+        for(let i=0; i<5; i++){
+            titles[i].innerHTML=`<h3>${data[i].title}</h3>`
+            urls[i].innerHTML=`<a href="${data[i].url}"> View Source Page</a>`
+            statements[i].innerHTML=`<h5>"${data[i].statement}"></h5>`
+        }
+        }catch(error){
+            alert(error)
+        }
+    })
+</script>
