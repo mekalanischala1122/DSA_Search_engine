@@ -40,14 +40,14 @@ app.get("/search", (req, res) => {
     var flag = 0;
     
     /* loading text data of each document into tfidf */
-    for (let i = 1; i <= 1436; i++) {
-        tfidf.addFileSync(`Problems/Problem_texts/problem_text${i}.txt`);
+    for (let i = 1; i <= 3639; i++) {
+        tfidf.addFileSync(`Problems/Problem_texts/problem_text_${i}.txt`);
     }
 
     let txt = [];
 
-    for (let i = 1; i <= 1436; i++) {
-        let data = fs.readFileSync(`Problems/Problem_texts/problem_text${i}.txt`, 'utf-8');
+    for (let i = 1; i <= 3639; i++) {
+        let data = fs.readFileSync(`Problems/Problem_texts/problem_text_${i}.txt`, 'utf-8');
         txt.push(data);
     }
 
