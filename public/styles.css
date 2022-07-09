@@ -20,13 +20,45 @@ form{
     text-align: justify;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    border-radius: 2%;
-    border-style: groove;
     padding: 1%;
 }
 
 footer{
     color: rgb(244, 237, 237);
     text-align: center;
-    margin: 80px auto 20px;
+    margin-bottom: 5px auto 20px;
+  }
+
+.loading{
+    margin: 20px;
+    color:rgb(244, 237, 237);
+    text-align: center;
+}
+
+.url{
+    text-align: right;
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
   }

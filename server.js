@@ -61,6 +61,8 @@ app.get("/search", (req, res) => {
     /* Creating top 5 similar problems */
     for (const [key, value] of sortedNumDesc.entries()) {
         if (flag < 5 && value != 0) {
+            if(txt[key-1]==undefined){}
+            else{
             let my_object = {
                 title: titletext[key - 1],
                 url: urltext[key - 1],
@@ -68,6 +70,7 @@ app.get("/search", (req, res) => {
             };
             flag += 1;
             data_array.push(my_object);
+          }
         }
         else {
             break;

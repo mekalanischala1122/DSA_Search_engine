@@ -10,44 +10,44 @@
 <body>
     <h1>Search your Query</h1>
     <form >
-        <input type="text" name="question" id="question">
+        <input type="text" name="question" id="question" placeholder="type your query..">
         <input type="submit" value="Search">
     </form>
     <div class="loading"></div>
     <div class="question">
         <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="statement"></div>
         <div class="url">
             <a href=""></a>
         </div>
-        <div class="statement"></div>
     </div>
     <div class="question">
         <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="statement"></div>
         <div class="url">
             <a href=""></a>
         </div>
-        <div class="statement"></div>
     </div>
     <div class="question">
         <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="statement"></div>
         <div class="url">
             <a href=""></a>
         </div>
-        <div class="statement"></div>
     </div>
     <div class="question">
         <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="statement"></div>
         <div class="url">
             <a href=""></a>
         </div>
-        <div class="statement"></div>
     </div>
     <div class="question">
         <div class="title" id="w3-panel w3-pale-green"></div>
+        <div class="statement"></div>
         <div class="url">
             <a href=""></a>
         </div>
-        <div class="statement"></div>
     </div>
 
     <footer>
@@ -64,7 +64,7 @@
     const titles = document.querySelectorAll(".title")
     const urls = document.querySelectorAll(".url")
     const statements = document.querySelectorAll('.statement')
-    const loadingDiv = document.querySelectorAll(".loading")
+    const loadingDiv = document.querySelector(".loading")
     form.addEventListener("submit", async(e)=>{
         e.preventDefault();
         const question = questionElement.value
